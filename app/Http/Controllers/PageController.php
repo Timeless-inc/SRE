@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function home()
     {
-        return view('home');
+        return view('home.index');
     }
 
     public function notFound()
@@ -25,7 +25,7 @@ class PageController extends Controller
         ];
 
         // Carrega a view Blade para o PDF (exemplo: 'pdf_template')
-        $pdf = PDF::loadView('pdf_template', $data);
+        $pdf = PDF::loadView('pdf', $data);
 
         // Retorna o PDF para download
         return $pdf->download('documento.pdf');

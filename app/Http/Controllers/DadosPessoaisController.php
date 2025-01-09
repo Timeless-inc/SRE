@@ -9,7 +9,7 @@ class DadosPessoaisController extends Controller
 {
     public function index()
     {
-        return view('dadospessoais');
+        return view('dadospessoais.index');
     }
 
     public function store(Request $request)
